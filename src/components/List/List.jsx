@@ -5,10 +5,9 @@ export function List({ items }) {
     <div style={{ overflowY: "scroll", height: "40%" }}>
       <table className="table table-hover table-borderless">
         <tbody>
-          <ListItem />
-          <ListItem />
-          <ListItem />
-          <ListItem />
+        {items.map((items,index)=>{
+            return <ListItem key = {items+index} items={items}/>
+        })}
         </tbody>
       </table>
     </div>
